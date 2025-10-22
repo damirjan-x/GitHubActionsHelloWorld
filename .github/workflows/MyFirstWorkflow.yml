@@ -5,6 +5,20 @@ on:
     branches: 
       - main
   workflow_dispatch:
+    inputs:
+      test:
+        description: "VeryGoodDescr"
+        required: true
+      loglevel:
+        description: "Log level"
+        default: info
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      testbuild:
+      description:
 
 jobs:
   MyFirstJob:
